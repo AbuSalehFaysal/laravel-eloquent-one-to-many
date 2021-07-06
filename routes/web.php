@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/add-post', [PostController::class, 'addPost']);
+
+Route::get('/add-comment/{id}', [PostController::class, 'addComment']);
+
+Route::get('/get-comments/{id}', [PostController::class, 'getCommentByPost']);
