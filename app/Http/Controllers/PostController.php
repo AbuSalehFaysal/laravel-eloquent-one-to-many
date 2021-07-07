@@ -19,7 +19,7 @@ class PostController extends Controller
     public function addComment($id){
         $post = Post::find($id);
         $comment = new Comment();
-        $comment->comment = "This is first comment";
+        $comment->comment = "This is second comment";
         $post->comments()->save($comment);
         return "comment has been posted";
     }
