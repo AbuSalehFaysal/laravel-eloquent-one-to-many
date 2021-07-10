@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EmpController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +25,13 @@ Route::get('/add-post', [PostController::class, 'addPost']);
 Route::get('/add-comment/{id}', [PostController::class, 'addComment']);
 
 Route::get('/get-comments/{id}', [PostController::class, 'getCommentByPost']);
+
+Route::get('/add-employee', [EmployeeController::class, 'addEmployee']);
+
+Route::get('/export-excel', [EmployeeController::class, 'exportIntoExcel']);
+
+Route::get('/export-csv', [EmployeeController::class, 'exportIntoCSV']);
+
+Route::get('/get-all-employee', [EmpController::class, 'getAllEmployees']);
+
+Route::get('/download-pdf', [EmpController::class, 'downloadPDF']);
