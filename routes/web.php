@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\EmpController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,3 +40,7 @@ Route::get('/download-pdf', [EmpController::class, 'downloadPDF']);
 Route::get('/import-form', [EmpController::class, 'importForm']);
 
 Route::post('/import', [EmpController::class, 'import'])->name('employee.import');
+
+Route::get('/resize-image', [ImageController::class, 'resizeImage']);
+
+Route::post('/resize-image', [ImageController::class, 'resizeImageSubmit'])->name('image.resize');
