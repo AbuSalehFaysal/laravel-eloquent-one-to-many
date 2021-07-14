@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DropzoneController;
 use App\Http\Controllers\EmpController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ImageController;
@@ -44,3 +45,7 @@ Route::post('/import', [EmpController::class, 'import'])->name('employee.import'
 Route::get('/resize-image', [ImageController::class, 'resizeImage']);
 
 Route::post('/resize-image', [ImageController::class, 'resizeImageSubmit'])->name('image.resize');
+
+Route::get('/dropzone', [DropzoneController::class, 'dropzone']);
+
+Route::post('/dropzone-store', [DropzoneController::class, 'dropzoneStore'])->name('dropzone.store');
