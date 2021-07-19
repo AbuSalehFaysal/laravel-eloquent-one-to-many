@@ -3,6 +3,7 @@
 use App\Http\Controllers\DropzoneController;
 use App\Http\Controllers\EmpController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -49,3 +50,5 @@ Route::post('/resize-image', [ImageController::class, 'resizeImageSubmit'])->nam
 Route::get('/dropzone', [DropzoneController::class, 'dropzone']);
 
 Route::post('/dropzone-store', [DropzoneController::class, 'dropzoneStore'])->name('dropzone.store');
+
+Route::get('/gallery', [GalleryController::class, 'gallery']);
