@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DropzoneController;
+use App\Http\Controllers\EditorController;
 use App\Http\Controllers\EmpController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\GalleryController;
@@ -52,3 +53,5 @@ Route::get('/dropzone', [DropzoneController::class, 'dropzone']);
 Route::post('/dropzone-store', [DropzoneController::class, 'dropzoneStore'])->name('dropzone.store');
 
 Route::get('/gallery', [GalleryController::class, 'gallery']);
+
+Route::get('/editor', [EditorController::class, 'editor']);
