@@ -7,6 +7,7 @@ use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,3 +56,15 @@ Route::post('/dropzone-store', [DropzoneController::class, 'dropzoneStore'])->na
 Route::get('/gallery', [GalleryController::class, 'gallery']);
 
 Route::get('/editor', [EditorController::class, 'editor']);
+
+Route::get('/add-student', [StudentController::class, 'addStudent']);
+
+Route::post('/add-student', [StudentController::class, 'storeStudent'])->name('student.store');
+
+Route::get('/all-students', [StudentController::class, 'allstudents']);
+
+Route::get('/edit-student/{id}', [StudentController::class, 'editStudent']);
+
+Route::post('/update-student', [StudentController::class, 'updateStudent'])->name('student.update');
+
+Route::get('/delete-student/{id}', [StudentController::class, 'deleteStudent']);
