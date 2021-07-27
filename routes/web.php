@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DropzoneController;
 use App\Http\Controllers\EditorController;
 use App\Http\Controllers\EmpController;
@@ -68,3 +69,7 @@ Route::get('/edit-student/{id}', [StudentController::class, 'editStudent']);
 Route::post('/update-student', [StudentController::class, 'updateStudent'])->name('student.update');
 
 Route::get('/delete-student/{id}', [StudentController::class, 'deleteStudent']);
+
+Route::get('/contact-us', [ContactController::class, 'contact']);
+
+Route::post('/send-message', [ContactController::class, 'sendEmail'])->name('contact.send');
