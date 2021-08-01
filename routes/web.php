@@ -11,6 +11,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ZipController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -83,3 +84,5 @@ Route::get('/add-product', [ProductController::class, 'addProduct']);
 Route::get('/search', [ProductController::class, 'search']);
 
 Route::get('/autocomplete', [ProductController::class, 'autoComplete'])->name('autocomplete');
+
+Route::get('/zip', [ZipController::class, 'zipFile']);
