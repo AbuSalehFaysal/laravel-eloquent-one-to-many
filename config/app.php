@@ -165,6 +165,7 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class, 
         \Intervention\Image\ImageServiceProvider::class,
         \Yajra\Datatables\DataTablesServiceProvider::class,
+        \Yajra\Datatables\ButtonsServiceProvider::class,
 
         /*
          * Package Service Providers...
